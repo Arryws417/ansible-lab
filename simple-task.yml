@@ -1,0 +1,16 @@
+---
+
+- name: simple module demo
+  hosts: 52.62.27.6
+  vars:
+    myfile: "~/sample1.txt"
+  tasks:
+    - name: create a simple text file
+      ansible.builtin.copy:
+        dest: "{{ myfile }}"
+        content: |
+          line 1
+          line 2
+          etc.
+    - name: testing network connection
+      ansible.builtin.ping:
