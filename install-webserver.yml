@@ -1,8 +1,7 @@
 ---
 - name: Install Nginx on Ubuntu
-  hosts: localhost
+  hosts: all
   become: yes
-
   tasks:
     - name: Update the apt package index
       apt:
