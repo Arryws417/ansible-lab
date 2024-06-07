@@ -12,15 +12,4 @@
       force_apt_get: yes
     when: ansible_distribution == "Ubuntu" or ansible_distribution == "debian"
     
-  - name: install zypper
-    community.general.zypper:
-      name:dos2unix
-      state: present
-
-  - name: upgrade all installed package for openSUSE
-    zypper:
-      name:"*"
-      state: latest
-    when: ansible_distribution == "openSUSE Leap"
-    
       
