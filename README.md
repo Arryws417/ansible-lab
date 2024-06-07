@@ -1,2 +1,2 @@
 # ansible-lab
-learning ansible
+simple ansible playbook for automation task
