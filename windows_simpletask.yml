@@ -1,0 +1,14 @@
+---
+
+- name: ansible simple task
+  hosts: [input ip address]
+  become: false
+  gather_facts: true
+  tasks:
+    - name: test connection
+      ansible.windows.win_ping:
+    - name: install package
+      chocolatey.chocolatey.win_chocolatey:
+        name: "google chrome"
+        state: present
+    
